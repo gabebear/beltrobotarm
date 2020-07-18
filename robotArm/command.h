@@ -32,7 +32,6 @@ void printComment(const char* c);
 void printComment(String const& s);
 void printStatus(String const& s);
 void printStatus(const char* c);
-
 void printOk();
 
 #endif
