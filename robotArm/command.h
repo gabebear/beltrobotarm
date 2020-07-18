@@ -21,22 +21,18 @@ class Command {
     bool processMessage(String& msg);
     Cmd getCmd() const;
   private: 
-    int pos(String& s, char c, int start = 0);
+    int pos(String const& s, char c, int start = 0);
     String message;
     Cmd command;
 };
 
 void printErr();
 void printFault();
-void printComment(char* c);
-void printComment(String& s);
-void printStatus(String& s);
-void printStatus(char* c);
+void printComment(const char* c);
+void printComment(String const& s);
+void printStatus(String const& s);
+void printStatus(const char* c);
+
 void printOk();
 
 #endif
-
-
-
-
-

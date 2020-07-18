@@ -91,7 +91,7 @@ Cmd Command::getCmd() const {
   return command; 
 }
 
-int Command::pos(String& s, char c, int start) {
+int Command::pos(String const& s, char c, int start) {
   int len = s.length();
   for (int i = start; i < len; i++) {
     if (c == s[i]) {
@@ -113,12 +113,12 @@ void printFault() {
   Serial.println("!!");
 }
 
-void printComment(char* c) {
+void printComment(const char* c) {
   Serial.print("// ");
   Serial.println(c);
 }
 
-void printComment(String& s) {
+void printComment(String const& s) {
   Serial.print("// ");
   Serial.println(s);
 }
@@ -127,11 +127,12 @@ void printOk() {
   Serial.println("ok"); 
 }
 
-void printStatus(String& s) {
+void printStatus(String const& s) {
   Serial.print("ok ");
   Serial.println(s);
 }
-void printStatus(char* c) {
+
+void printStatus(const char* c) {
   Serial.print("ok ");
   Serial.println(c);
 }
